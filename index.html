@@ -39,59 +39,112 @@
         </div>
     </div>
 
-    <nav class="sticky top-0 z-50 bg-white shadow-md transition-all duration-300">
-        <div class="container mx-auto px-6 lg:px-20 h-20 flex justify-between items-center">
+    <nav class="navbar">
+    <div class="nav-container">
+        <a href="#" class="nav-logo">
+            <img src="./assets/logo/pt-tetra.png" alt="Logo">
+        </a>
+        
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
             
-            <div class="flex-shrink-0 flex items-center">
-                <a href="#home">
-                    <img src="./assets/logo/pt-tetra.png" alt="Logo PT Tetra" class="h-12 w-auto object-contain hover:opacity-90 transition-opacity">
+            <!-- Tentang Kami dengan Mega Menu -->
+            <li class="nav-item has-mega">
+                <a href="#" class="nav-link">
+                    Tentang Kami <i class="fas fa-chevron-down nav-arrow"></i>
                 </a>
-            </div>
+                <div class="mega-menu">
+                    <div class="mega-inner">
+                        <!-- Kolom Kiri: Deskripsi -->
+                        <div class="mega-desc">
+                            <h3>TENTANG KAMI</h3>
+                            <div class="mega-underline"></div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Membangun sebuah adpiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Tempatkan di id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean.</p>
+                        </div>
 
-            <div class="hidden lg:flex items-center space-x-8 font-medium text-sm text-gray-700">
-                <a href="#home" class="text-primary font-bold">Home</a>
-                
-                <div class="relative group">
-                    <button class="flex items-center gap-1 hover:text-primary transition-colors py-6">
-                        Tentang Kami <i class="fas fa-chevron-down text-[10px]"></i>
-                    </button>
-                    <div class="absolute top-full left-0 w-48 bg-white shadow-xl border-t-2 border-primary opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                        <a href="#about" class="block px-4 py-3 hover:bg-gray-50 hover:text-primary border-b border-gray-100">Profil Perusahaan</a>
-                        <a href="#" class="block px-4 py-3 hover:bg-gray-50 hover:text-primary">Sertifikasi</a>
+                        <div class="mega-divider"></div>
+
+                        <!-- Kolom Kanan: Links -->
+                        <div class="mega-links">
+                            <h4>OUR STORY</h4>
+                            <div class="mega-underline"></div>
+                            <ul>
+                                <li><a href="./index.html">Profil Perusahaan</a></li>
+                                <li><a href="#">Sertifikasi</a></li>
+                                <li><a href="#">Lokasi</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Gambar Kanan -->
+                        <div class="mega-image">
+                            <img src="https://images.unsplash.com/photo-1694230155228-cdde50083573?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="About">
+                        </div>
                     </div>
                 </div>
+            </li>
 
-                <div class="relative group">
-                    <button class="flex items-center gap-1 hover:text-primary transition-colors py-6">
-                        Layanan <i class="fas fa-chevron-down text-[10px]"></i>
-                    </button>
-                    <div class="absolute top-full left-0 w-56 bg-white shadow-xl border-t-2 border-primary opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                        <a href="#services" class="block px-4 py-3 hover:bg-gray-50 hover:text-primary border-b border-gray-100">DGA Analysis</a>
-                        <a href="#" class="block px-4 py-3 hover:bg-gray-50 hover:text-primary border-b border-gray-100">Breakdown Voltage</a>
-                        <a href="#" class="block px-4 py-3 hover:bg-gray-50 hover:text-primary">Water Content</a>
+            <!-- Layanan dengan Mega Menu 2 kolom links -->
+            <li class="nav-item has-mega">
+                <a href="#" class="nav-link">
+                    Layanan <i class="fas fa-chevron-down nav-arrow"></i>
+                </a>
+                <div class="mega-menu">
+                    <div class="mega-inner">
+                        <!-- Kolom Kiri: Deskripsi -->
+                        <div class="mega-desc">
+                            <h3>LAYANAN KAMI</h3>
+                            <div class="mega-underline"></div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Membangun sebuah adpiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Tempatkan di id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean.</p>
+                        </div>
+
+                        <div class="mega-divider"></div>
+
+                        <!-- Kolom Links (bisa 2 kolom) -->
+                        <div class="mega-links mega-links-wide">
+                            <div class="mega-links-col">
+                                <h4><a href="#">DGA</a></h4>
+                                <div class="mega-underline"></div>
+                                <p>Analisa gas terlarut untuk mendeteksi indikasi kegagalan termal atau elektrik.</p>
+
+                                <h4 style="margin-top:1.25rem"><a href="#">BREAKDOWN VOLTAGE</a></h4>
+                                <div class="mega-underline"></div>
+                                <p>Pengujian Tegangan Tembus untuk mengukur kemampuan isolasi minyak.</p>
+
+                                <h4 style="margin-top:1.25rem"><a href="#">WATER CONTENT</a></h4>
+                                <div class="mega-underline"></div>
+                                <p>Analisa Kadar Air (Moisture) untuk mengetahui tingkat kelembaban.</p>
+                            </div>
+
+                            <div class="mega-links-col">
+                                <h4><a href="#">ACIDITY</a></h4>
+                                <div class="mega-underline"></div>
+                                <p>Mengukur tingkat keasaman minyak akibat oksidasi.</p>
+
+                                <h4 style="margin-top:1.25rem"><a href="#">INTERFACIAL TENSION</a></h4>
+                                <div class="mega-underline"></div>
+                                <p>Tegangan Antarmuka untuk mendeteksi kontaminan polar.</p>
+
+                                <h4 style="margin-top:1.25rem"><a href="#">COLOR & VISUAL</a></h4>
+                                <div class="mega-underline"></div>
+                                <p>Pemeriksaan visual fisik dan warna minyak.</p>
+                            </div>
+                        </div>
+
+                        <!-- Gambar Kanan -->
+                        <div class="mega-image">
+                            <img src="https://images.unsplash.com/photo-1554475900-0a0350e3fc7b?q=80&w=717&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Services">
+                        </div>
                     </div>
                 </div>
+            </li>
 
-                <a href="#" class="hover:text-primary transition-colors">Berita</a>
-                <a href="#contact" class="hover:text-primary transition-colors">Kontak</a>
-            </div>
+            <li class="nav-item"><a href="#" class="nav-link">Berita</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Kontak</a></li>
+            </ul>
 
-            <div class="hidden lg:block">
-                <a href="#contact" class="bg-secondary hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-sm text-xs uppercase tracking-wider transition-all shadow-md flex items-center gap-2">
-                    <i class="fas fa-comments"></i> Hubungi Kami
-                </a>
-            </div>
-
-            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="lg:hidden text-secondary text-2xl">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
-            <a href="#home" class="block px-6 py-3 text-primary font-bold border-b border-gray-100">Home</a>
-            <a href="#about" class="block px-6 py-3 text-gray-600 hover:text-primary border-b border-gray-100">Tentang Kami</a>
-            <a href="#services" class="block px-6 py-3 text-gray-600 hover:text-primary border-b border-gray-100">Layanan</a>
-            <a href="#contact" class="block px-6 py-3 text-gray-600 hover:text-primary">Hubungi Kami</a>
+            <a href="#" class="nav-cta">
+                <i class="fas fa-comments"></i> HUBUNGI KAMI
+            </a>
         </div>
     </nav>
 
@@ -382,7 +435,7 @@
                 
                 <div class="lg:w-1/2 w-full">
                     <div class="grid grid-cols-2 gap-4 h-[400px]">
-                        <img src="https://images.unsplash.com/photo-1581093588402-40e4560d057a?q=80&w=1000" alt="Lab Activity" class="w-full h-full object-cover rounded-lg shadow-md hover:scale-[1.02] transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1570723989345-3a537f60a9c5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lab Activity" class="w-full h-full object-cover rounded-lg shadow-md hover:scale-[1.02] transition-transform duration-500">
                         
                         <div class="grid grid-rows-2 gap-4">
                             <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1000" alt="Equipment" class="w-full h-full object-cover rounded-lg shadow-md hover:scale-[1.02] transition-transform duration-500">
