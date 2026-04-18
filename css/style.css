@@ -1981,4 +1981,294 @@ video {
     font-size: 3rem;
     line-height: 1;
   }
+
+  .floating-contact-wrapper {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    font-family: Roboto, sans-serif;
+}
+
+.floating-contact-btn {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F37021 0%, #E85A0F 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(243, 112, 33, 0.4);
+    transition: all 0.3s ease;
+}
+
+.floating-contact-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(243, 112, 33, 0.6);
+}
+
+.floating-contact-btn i {
+    transition: transform 0.3s ease;
+}
+
+.floating-contact-wrapper.active .floating-contact-btn i {
+    transform: rotate(180deg);
+}
+
+.floating-contact-menu {
+    position: absolute;
+    bottom: 5rem;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+    overflow: visible;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px) scale(0.95);
+    transition: all 0.3s ease;
+    min-width: 200px;
+    border-radius: 12px;
+}
+
+.floating-contact-menu::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+/* Clip hanya bagian dalam bukan submenu */
+.contact-option:first-child {
+    border-radius: 12px 12px 0 0;
+}
+
+.contact-option:last-child {
+    border-radius: 0 0 12px 12px;
+}
+
+.floating-contact-wrapper.active .floating-contact-menu,
+.floating-contact-wrapper:hover .floating-contact-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.contact-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: #004B87;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.contact-option:hover {
+    background-color: #F8FAFC;
+    color: #F37021;
+}
+
+.contact-option i {
+    font-size: 1rem;
+    width: 1rem;
+}
+
+.email-option {
+    border-bottom: 1px solid #E5E7EB;
+}
+
+/* WhatsApp Option Styles */
+.whatsapp-option {
+      position: relative;
+      border-radius: 0 0 12px 12px;
+      overflow: visible;
+}
+
+.whatsapp-main {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #004B87;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-radius: 0 0 12px 12px;
+}
+
+.whatsapp-main:hover {
+    background-color: #F8FAFC;
+    color: #F37021;
+}
+
+.submenu-arrow {
+    margin-left: auto;
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-option.open .submenu-arrow {
+    transform: rotate(90deg);
+}
+
+/* WhatsApp Card Menu */
+.whatsapp-card-menu {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px) scale(0.95);
+    transition: all 0.3s ease;
+    min-width: 280px;
+    max-width: 320px;
+}
+
+.whatsapp-option.open .whatsapp-card-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+/* Individual WhatsApp Card */
+.whatsapp-card {
+    display: block;
+    padding: 0;
+    background: white;
+    border-radius: 0 0 12px 12px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-bottom: 0;
+}
+
+.whatsapp-card:hover {
+    background-color: #F8FAFC;
+    transform: translateX(-2px);
+}
+
+.whatsapp-card:last-child {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.whatsapp-card:first-child {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* Card Header */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.card-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #6B7280;
+    letter-spacing: 0.05em;
+}
+
+.card-percentage {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #F37021;
+}
+
+/* Card Phone */
+.card-phone {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #F3F4F6;
+}
+
+.card-phone i {
+    font-size: 1rem;
+    color: #00A651;
+}
+
+.card-phone span {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #004B87;
+}
+
+/* Card Footer */
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border-top: 1px solid #E5E7EB;
+    background: #F9FAFB;
+    color: #F37021;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.card-footer i:last-child {
+    margin-left: auto;
+    font-size: 0.75rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .floating-contact-wrapper {
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .floating-contact-btn {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.25rem;
+    }
+
+    .floating-contact-menu {
+        min-width: 180px;
+    }
+
+    .whatsapp-submenu {
+        position: fixed;
+        bottom: auto;
+        right: 0;
+        left: auto;
+        top: 50%;
+        transform: translateY(-50%) scaleX(0.95);
+        transform-origin: right center;
+        min-width: 220px;
+    }
+
+    .whatsapp-option.open .whatsapp-submenu {
+        transform: translateY(-50%) scaleX(1);
+    }
+  }
+
+  
 }
