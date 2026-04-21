@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Hubungi Kami - PT Tetra Solusi Energi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="../../css/style.css" rel="stylesheet">
+    <style>
+        .contact-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #E5E7EB;
+            background: #F9FAFB;
+            color: #374151;
+            font-size: 0.875rem;
+            font-family: Roboto, sans-serif;
+            transition: all 0.2s;
+            outline: none;
+            border-radius: 2px;
+        }
+        .contact-input:focus {
+            border-color: #F37021;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(243,112,33,0.1);
+        }
+        .contact-input::placeholder { color: #9CA3AF; }
+        select.contact-input { appearance: none; cursor: pointer; }
+    </style>
+</head>
+<body class="bg-surface text-slate-700 font-sans antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-secondary text-white text-xs py-3 border-b border-white/10">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-6">
+                <a href="mailto:info@tsilab.co.id" class="flex items-center gap-2 hover:text-gray-300 transition-colors">
+                    <i class="fas fa-envelope"></i> info@tsilab.co.id
+                </a>
+                <a href="https://wa.me/6262129688694" class="flex items-center gap-2 hover:text-gray-300 transition-colors">
+                    <i class="fas fa-phone-alt"></i> +62 21 2968 8694
+                </a>
+                <a href="https://wa.me/6281299887766" class="flex items-center gap-2 hover:text-gray-300 transition-colors">
+                    <i class="fas fa-phone-alt"></i> +628 12 9988 7766
+                </a>
+            </div>
+            <div class="flex items-center gap-6">
+                <span class="hidden md:flex items-center gap-2">
+                    <i class="far fa-clock"></i> Senin - Jumat : 08:00 - 17:00
+                </span>
+                <div class="flex items-center gap-3 border-l border-white/20 pl-6">
+                    <a href="#" class="opacity-100 hover:opacity-80"><img src="https://flagcdn.com/w20/gb.png" alt="EN" class="w-5"></a>
+                    <a href="#" class="opacity-100 hover:opacity-80"><img src="https://flagcdn.com/w20/id.png" alt="ID" class="w-5"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">
+                <img src="../../assets/logo/pt-tetra.png" alt="Logo">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item has-mega">
+                    <a href="#" class="nav-link">Tentang Kami <i class="fas fa-chevron-down nav-arrow"></i></a>
+                    <div class="mega-menu">
+                        <div class="mega-inner">
+                            <div class="mega-desc">
+                                <h3>TENTANG KAMI</h3>
+                                <div class="mega-underline"></div>
+                                <p>Laboratorium independen yang berdedikasi untuk mendukung sektor energi melalui layanan pengujian kualitas minyak transformator.</p>
+                            </div>
+                            <div class="mega-divider"></div>
+                            <div class="mega-links">
+                                <h4>OUR STORY</h4>
+                                <div class="mega-underline"></div>
+                                <ul>
+                                    <li><a href="../profil-perusahaan/profil-perusahaan.html">Profil Perusahaan</a></li>
+                                    <li><a href="#">Sertifikasi</a></li>
+                                    <li><a href="#">Lokasi</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-image">
+                                <img src="https://images.unsplash.com/photo-1694230155228-cdde50083573?q=80&w=600" alt="About">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item has-mega">
+                    <a href="#" class="nav-link">Layanan <i class="fas fa-chevron-down nav-arrow"></i></a>
+                    <div class="mega-menu">
+                        <div class="mega-inner">
+                            <div class="mega-desc">
+                                <h3>LAYANAN KAMI</h3>
+                                <div class="mega-underline"></div>
+                                <p>Pengujian kualitas minyak isolasi transformator menggunakan metode standar ASTM & IEC. Hasil akurat, cepat, dan ditangani personel bersertifikat.</p>
+                            </div>
+                            <div class="mega-divider"></div>
+                            <div class="mega-links mega-links-wide">
+                                <div class="mega-links-col">
+                                    <h4><a href="../layanan/dga.html">DGA</a></h4>
+                                    <div class="mega-underline"></div>
+                                    <p>Analisa gas terlarut untuk mendeteksi indikasi kegagalan termal atau elektrik.</p>
+                                    <h4 style="margin-top:1.25rem"><a href="../layanan/breakdown-voltage.html">BREAKDOWN VOLTAGE</a></h4>
+                                    <div class="mega-underline"></div>
+                                    <p>Pengujian Tegangan Tembus untuk mengukur kemampuan isolasi minyak.</p>
+                                    <h4 style="margin-top:1.25rem"><a href="../layanan/water-content.html">WATER CONTENT</a></h4>
+                                    <div class="mega-underline"></div>
+                                    <p>Analisa Kadar Air (Moisture) untuk mengetahui tingkat kelembaban.</p>
+                                </div>
+                                <div class="mega-links-col">
+                                    <h4><a href="../layanan/acidity.html">ACIDITY</a></h4>
+                                    <div class="mega-underline"></div>
+                                    <p>Mengukur tingkat keasaman minyak akibat oksidasi.</p>
+                                    <h4 style="margin-top:1.25rem"><a href="../layanan/interfacial-tension.html">INTERFACIAL TENSION</a></h4>
+                                    <div class="mega-underline"></div>
+                                    <p>Tegangan Antarmuka untuk mendeteksi kontaminan polar.</p>
+                                    <h4 style="margin-top:1.25rem"><a href="../layanan/color-visual.html">COLOR & VISUAL</a></h4>
+                                    <div class="mega-underline"></div>
+                                    <p>Pemeriksaan visual fisik dan warna minyak.</p>
+                                </div>
+                            </div>
+                            <div class="mega-image">
+                                <img src="https://images.unsplash.com/photo-1554475900-0a0350e3fc7b?q=80&w=600" alt="Services">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">Berita</a></li>
+                <li class="nav-item active"><a href="./hubungi-kami.html" class="nav-link">Kontak</a></li>
+            </ul>
+            <a href="./hubungi-kami.html" class="nav-cta">
+                <i class="fas fa-comments"></i> HUBUNGI KAMI
+            </a>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-bg">
+            <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=1200&auto=format&fit=crop" alt="Kontak" class="w-full h-full object-cover opacity-15"/>
+            <div class="page-hero-overlay"></div>
+            <div class="page-hero-dots"></div>
+        </div>
+        <div class="page-hero-accent-bar"></div>
+
+        <div class="container mx-auto px-6 lg:px-32" style="position:relative;">
+            <div class="page-hero-breadcrumb">
+                <a href="../index.html">Home</a>
+                <i class="fas fa-chevron-right sep"></i>
+                <span style="color:rgba(255,255,255,0.8)">Hubungi Kami</span>
+            </div>
+
+            <div class="page-hero-bottom">
+                <div>
+                    <div class="page-hero-label">
+                        <div class="page-hero-label-line"></div>
+                        <span></span>
+                    </div>
+                    <h1>Hubungi Kami</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Cards -->
+    <div class="bg-white py-12 shadow-sm relative z-10">
+        <div class="container mx-auto px-6 lg:px-32">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex items-start gap-5 group">
+                    <div class="w-14 h-14 bg-primary/10 text-primary rounded-sm flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-all">
+                        <i class="fas fa-map-marker-alt text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-secondary mb-1">Alamat Kantor</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Jl. Industri Raya No. 45<br>Jakarta Barat, 11000<br>Indonesia</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-5 group">
+                    <div class="w-14 h-14 bg-primary/10 text-primary rounded-sm flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-all">
+                        <i class="fas fa-phone-alt text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-secondary mb-1">Telepon & WhatsApp</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">
+                            <a href="https://wa.me/6262129688694" class="hover:text-primary transition-colors">+62 21 2968 8694</a> (Sales)<br>
+                            <a href="https://wa.me/6281299887766" class="hover:text-primary transition-colors">+62 812 9988 7766</a> (Support)<br>
+                            <span class="text-xs text-gray-400">Senin – Jumat, 08:00–17:00</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-5 group">
+                    <div class="w-14 h-14 bg-primary/10 text-primary rounded-sm flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-all">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-secondary mb-1">Email</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">
+                            <a href="mailto:info@tsilab.co.id" class="hover:text-primary transition-colors">info@tsilab.co.id</a><br>
+                            <span class="text-xs text-gray-400">Respon dalam 1x24 jam kerja</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form & Map -->
+    <section class="py-20 bg-surface">
+        <div class="container mx-auto px-6 lg:px-32">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Form -->
+                <div class="lg:w-7/12">
+                    <div class="bg-secondary rounded-sm overflow-hidden shadow-lg" style="height: 280px;">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1!2d106.7!3d-6.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTInMDAuMCJTIDEwNsKwNDInMDAuMCJF!5e0!3m2!1sid!2sid!4v1234567890"
+                            width="100%" height="100%" style="border:0; filter: grayscale(20%);" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+
+                    <!-- WhatsApp Cards -->
+                    <div class="bg-white p-6 shadow-sm rounded-sm">
+                        <h3 class="font-display font-bold text-secondary mb-4 flex items-center gap-2">
+                            <i class="fab fa-whatsapp text-accent text-xl"></i> Chat Langsung via WhatsApp
+                        </h3>
+                        <p class="text-gray-500 text-sm mb-5">Respons lebih cepat melalui WhatsApp kami:</p>
+                        <div class="space-y-3">
+                            <a href="https://wa.me/6262129688694?text=Halo%20PT%20Tetra%2C%20saya%20ingin%20bertanya%20mengenai%20layanan%20pengujian." target="_blank"
+                               class="flex items-center gap-4 p-4 border border-gray-100 hover:border-accent hover:bg-accent/5 transition-all rounded-sm group">
+                                <div class="w-10 h-10 bg-accent/10 text-accent rounded-full flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all">
+                                    <i class="fab fa-whatsapp text-lg"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-secondary text-sm">Tim Sales</div>
+                                    <div class="text-gray-500 text-xs">+62 21 2968 8694</div>
+                                </div>
+                                <i class="fas fa-chevron-right text-gray-300 ml-auto group-hover:text-accent transition-colors"></i>
+                            </a>
+                            <a href="https://wa.me/6281299887766?text=Halo%20PT%20Tetra%2C%20saya%20butuh%20bantuan%20teknis." target="_blank"
+                               class="flex items-center gap-4 p-4 border border-gray-100 hover:border-accent hover:bg-accent/5 transition-all rounded-sm group">
+                                <div class="w-10 h-10 bg-accent/10 text-accent rounded-full flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all">
+                                    <i class="fab fa-whatsapp text-lg"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-secondary text-sm">Tim Support</div>
+                                    <div class="text-gray-500 text-xs">+62 812 9988 7766</div>
+                                </div>
+                                <i class="fas fa-chevron-right text-gray-300 ml-auto group-hover:text-accent transition-colors"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Jam Operasional -->
+                    <div class="bg-white p-6 shadow-sm rounded-sm">
+                        <h3 class="font-display font-bold text-secondary mb-4 flex items-center gap-2">
+                            <i class="far fa-clock text-primary text-lg"></i> Jam Operasional
+                        </h3>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between items-center py-2 border-b border-gray-50">
+                                <span class="text-gray-600">Senin – Jumat</span>
+                                <span class="font-bold text-secondary">08:00 – 17:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-50">
+                                <span class="text-gray-600">Sabtu</span>
+                                <span class="font-medium text-gray-400">Tutup</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2">
+                                <span class="text-gray-600">Minggu & Hari Libur</span>
+                                <span class="font-medium text-gray-400">Tutup</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex items-center gap-2 text-xs text-accent">
+                            <span class="w-2 h-2 rounded-full bg-accent shadow-[0_0_6px_rgba(0,166,81,0.8)] animate-pulse inline-block"></span>
+                            Saat ini dalam jam operasional
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 lg:px-32">
+            <div class="text-center mb-12">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase mb-2 block">Pertanyaan Umum</span>
+                <h2 class="text-3xl font-display font-bold text-secondary">FAQ</h2>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-4" id="faq">
+                <div class="faq-item border border-gray-100 rounded-sm overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-5 text-left font-bold text-secondary hover:text-primary transition-colors">
+                        <span>Berapa lama waktu proses pengujian?</span>
+                        <i class="fas fa-chevron-down text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-body hidden px-5 pb-5 text-gray-500 text-sm leading-relaxed">
+                        Waktu proses pengujian standar adalah 3–5 hari kerja setelah sampel diterima di laboratorium. Untuk kebutuhan mendesak, tersedia layanan express 1–2 hari kerja dengan biaya tambahan. Laporan hasil uji akan dikirim melalui email dalam format PDF.
+                    </div>
+                </div>
+                <div class="faq-item border border-gray-100 rounded-sm overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-5 text-left font-bold text-secondary hover:text-primary transition-colors">
+                        <span>Bagaimana cara mengirim sampel minyak?</span>
+                        <i class="fas fa-chevron-down text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-body hidden px-5 pb-5 text-gray-500 text-sm leading-relaxed">
+                        Sampel dapat diantar langsung ke kantor kami, atau kami dapat menjadwalkan pengambilan sampel di lokasi Anda. Hubungi tim kami untuk prosedur pengemasan dan pengiriman yang sesuai agar integritas sampel terjaga.
+                    </div>
+                </div>
+                <div class="faq-item border border-gray-100 rounded-sm overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-5 text-left font-bold text-secondary hover:text-primary transition-colors">
+                        <span>Apakah ada layanan sampling ke lokasi?</span>
+                        <i class="fas fa-chevron-down text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-body hidden px-5 pb-5 text-gray-500 text-sm leading-relaxed">
+                        Ya, kami menyediakan layanan field sampling oleh teknisi berpengalaman ke lokasi transformator Anda di seluruh Indonesia. Sampling yang benar sangat penting untuk memastikan hasil pengujian yang akurat dan representatif.
+                    </div>
+                </div>
+                <div class="faq-item border border-gray-100 rounded-sm overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-5 text-left font-bold text-secondary hover:text-primary transition-colors">
+                        <span>Bagaimana format laporan hasil pengujian?</span>
+                        <i class="fas fa-chevron-down text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-body hidden px-5 pb-5 text-gray-500 text-sm leading-relaxed">
+                        Laporan kami mencakup data hasil pengujian lengkap beserta interpretasi kondisi transformator, perbandingan dengan nilai batas standar internasional, rekomendasi tindakan, dan tanda tangan analis bersertifikat. Laporan tersedia dalam Bahasa Indonesia dan Bahasa Inggris.
+                    </div>
+                </div>
+                <div class="faq-item border border-gray-100 rounded-sm overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-5 text-left font-bold text-secondary hover:text-primary transition-colors">
+                        <span>Apakah PT Tetra memiliki akreditasi resmi?</span>
+                        <i class="fas fa-chevron-down text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-body hidden px-5 pb-5 text-gray-500 text-sm leading-relaxed">
+                        Ya. PT Tetra Solusi Energi telah terakreditasi oleh Komite Akreditasi Nasional (KAN) dengan nomor akreditasi LP-1160-IDN sesuai standar ISO/IEC 17025:2017, yang menjamin kompetensi dan reliabilitas hasil pengujian kami.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-16 text-sm">
+        <div class="container mx-auto px-6 lg:px-32">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg font-display">Perusahaan</h4>
+                    <ul class="space-y-3">
+                        <li><a class="hover:text-primary transition-colors" href="./profil-perusahaan.html">Tentang Kami</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Sertifikasi</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Karir</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Berita & Update</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Kebijakan Mutu</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg font-display">Layanan</h4>
+                    <ul class="space-y-3">
+                        <li><a class="hover:text-primary transition-colors" href="./layanan/dga.html">DGA Analysis</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="./layanan/breakdown-voltage.html">Breakdown Voltage</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="./layanan/water-content.html">Water Content</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="./layanan/acidity.html">Acidity Test</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="./layanan/interfacial-tension.html">Interfacial Tension</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="./layanan/color-visual.html">Color & Visual</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg font-display">Bantuan</h4>
+                    <ul class="space-y-3">
+                        <li><a class="hover:text-primary transition-colors" href="./hubungi-kami.html">Pusat Bantuan</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="./hubungi-kami.html">Permintaan Penawaran</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Lacak Sampel</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-primary">
+                            <i class="fas fa-bolt text-xl"></i>
+                        </div>
+                        <span class="font-display font-bold text-xl text-white tracking-wide">PT TETRA</span>
+                    </div>
+                    <p class="mb-6 leading-relaxed text-xs text-gray-500">PT Tetra Solusi Energi adalah laboratorium independen penyedia jasa pengujian minyak transformator terkemuka di Indonesia.</p>
+                    <div class="space-y-3 text-xs">
+                        <div class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-primary mt-1"></i><span>Jl. Industri Raya No. 45<br>Jakarta Barat, 11000 Indonesia</span></div>
+                        <div class="flex items-center gap-3"><i class="fas fa-phone-alt text-primary"></i><span>+62 21 2968 8694</span></div>
+                        <div class="flex items-center gap-3"><i class="fas fa-envelope text-primary"></i><span>info@tsilab.co.id</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+                <div class="flex gap-6 mb-4 md:mb-0">
+                    <a class="hover:text-white transition-colors" href="#">Syarat & Ketentuan</a>
+                    <a class="hover:text-white transition-colors" href="#">Kebijakan Privasi</a>
+                </div>
+                <p>Copyright &copy; 2026 PT Tetra Solusi Energi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact -->
+    <div id="floating-contact" class="floating-contact-wrapper">
+        <button id="contact-toggle" class="floating-contact-btn" title="Hubungi Kami">
+            <i class="fas fa-headset"></i>
+        </button>
+        <div class="floating-contact-menu">
+            <a href="mailto:info@tsilab.co.id" class="contact-option email-option">
+                <i class="fas fa-envelope"></i><span>Email</span>
+            </a>
+            <div class="contact-option whatsapp-option" id="whatsapp-container">
+                <button class="whatsapp-main">
+                    <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+                    <i class="fas fa-chevron-down submenu-arrow"></i>
+                </button>
+                <div class="whatsapp-card-menu">
+                    <a href="https://wa.me/6262129688694" target="_blank" class="whatsapp-card">
+                        <div class="card-header"><span class="card-label">Tim Sales</span></div>
+                        <div class="card-phone"><i class="fab fa-whatsapp"></i><span>+62 21 2968 8694</span></div>
+                        <div class="card-footer"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></div>
+                    </a>
+                    <a href="https://wa.me/6281299887766" target="_blank" class="whatsapp-card">
+                        <div class="card-header"><span class="card-label">Tim Support</span></div>
+                        <div class="card-phone"><i class="fab fa-whatsapp"></i><span>+62 812 9988 7766</span></div>
+                        <div class="card-footer"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/js/floating-contact.js"></script>
+    <script src="./assets/js/navbar.js"></script>
+
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            document.getElementById('contactForm').classList.add('hidden');
+            document.getElementById('successMsg').classList.remove('hidden');
+        }
+
+        function toggleFaq(btn) {
+            const body = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+            const isOpen = !body.classList.contains('hidden');
+            
+            // Close all
+            document.querySelectorAll('.faq-body').forEach(b => b.classList.add('hidden'));
+            document.querySelectorAll('.faq-item button i').forEach(i => i.style.transform = '');
+            
+            if (!isOpen) {
+                body.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+</body>
+</html>
