@@ -1981,7 +1981,7 @@ video {
     font-size: 3rem;
     line-height: 1;
   }
-
+}
   /* ===== NAVBAR BASE ===== */
 .navbar {
     position: sticky;
@@ -2014,6 +2014,16 @@ video {
     padding: 0;
     flex: 1;
     justify-content: center;
+}
+
+/* nav-close hidden at desktop */
+.nav-close {
+    display: none;
+}
+
+/* nav-menu-cta hidden at desktop */
+.nav-menu-cta {
+    display: none;
 }
 
 .nav-link {
@@ -3137,7 +3147,636 @@ video {
     .whatsapp-option.open .whatsapp-submenu {
         transform: translateY(-50%) scaleX(1);
     }
-  }
+}
+/* ============================================================
+   MOBILE & TABLET RESPONSIVE STYLES
+   Breakpoints: mobile < 768px | tablet 768px–1023px
+   ============================================================ */
 
-  
+/* ===== MOBILE NAV TOGGLE BUTTON ===== */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    margin-left: auto;
+    flex-shrink: 0;
+    z-index: 110;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #1a1a2e;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+.nav-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== TOPBAR MOBILE ===== */
+@media (max-width: 767px) {
+    .bg-secondary.text-white.text-xs.py-3 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        overflow: hidden;
+    }
+
+    .bg-secondary .flex.items-center.gap-6:first-child {
+        gap: 0.75rem;
+        font-size: 0.65rem;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 2px;
+    }
+
+    .bg-secondary .flex.items-center.gap-6:first-child::-webkit-scrollbar {
+        display: none;
+    }
+
+    .bg-secondary .flex.items-center.gap-6 a {
+        white-space: nowrap;
+        font-size: 0.65rem;
+    }
+
+    .bg-secondary .flex.items-center.gap-3.border-l {
+        margin-top: 0;
+        border-left: none;
+        padding-left: 0;
+    }
+}
+
+/* ===== NAVBAR MOBILE/TABLET ===== */
+@media (max-width: 1023px) {
+
+    /* Show hamburger button */
+    .nav-toggle {
+        display: flex !important;
+        order: 3;
+    }
+
+    /* Navbar bar */
+    .navbar {
+        z-index: 201;
+    }
+
+    .nav-container {
+        padding: 0.75rem 1.25rem !important;
+        min-height: 60px;
+        gap: 0.75rem;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .nav-logo {
+        order: 1;
+        flex-shrink: 0;
+    }
+
+    .nav-logo img {
+        height: 40px;
+    }
+
+    /* Hide desktop CTA */
+    .nav-cta {
+        display: none !important;
+    }
+
+    /* FULLSCREEN MOBILE MENU — hidden until .open */
+    .nav-menu {
+        display: none !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: white !important;
+        z-index: 200 !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: stretch !important;
+        padding: 4.5rem 0 2rem !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
+        gap: 0 !important;
+        flex: none !important;
+        order: 2;
+        margin: 0 !important;
+    }
+
+    .nav-menu.open {
+        display: flex !important;
+    }
+
+    .nav-item {
+        border-bottom: 1px solid #f0f0f0;
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 1rem 1.5rem !important;
+        font-size: 1rem !important;
+        font-weight: 600 !important;
+        justify-content: space-between !important;
+        color: #1a1a2e !important;
+        border-bottom: none !important;
+        width: 100%;
+    }
+
+    .nav-link:hover,
+    .nav-item.has-mega:hover > .nav-link {
+        color: #F37021 !important;
+        background: #FFF8F5;
+    }
+
+    .nav-item.active > .nav-link {
+        color: #F37021 !important;
+        border-bottom: none !important;
+        background: #FFF8F5;
+    }
+
+    /* Mega menu accordion */
+    .mega-menu {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        box-shadow: none !important;
+        display: none !important;
+        background: #F9FAFB;
+        border-top: 1px solid #E5E7EB;
+        transition: none !important;
+    }
+
+    .nav-item.has-mega.mega-open .mega-menu {
+        display: block !important;
+    }
+
+    /* Kill CSS hover on mobile */
+    .nav-item.has-mega:hover .mega-menu {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+    .nav-item.has-mega.mega-open:hover .mega-menu {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .mega-inner {
+        flex-direction: column !important;
+        padding: 1rem 1.5rem !important;
+        gap: 1rem !important;
+    }
+
+    .mega-desc { flex: none; }
+    .mega-divider { display: none !important; }
+    .mega-image { display: none !important; }
+    .mega-links-wide { flex-direction: column !important; gap: 0.5rem !important; }
+
+    /* Mobile CTA inside menu */
+    .nav-menu-cta {
+        display: block;
+        margin: 1.25rem 1.5rem 0.5rem;
+        padding: 0.875rem 1.25rem;
+        background: #004B87;
+        color: white !important;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.875rem;
+        letter-spacing: 0.05em;
+        border-radius: 6px;
+    }
+
+    /* Close X button */
+    .nav-close {
+        position: absolute;
+        top: 1rem;
+        right: 1.25rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        background: #F3F4F6;
+        border: none;
+        border-radius: 50%;
+        font-size: 1.1rem;
+        cursor: pointer;
+        color: #374151;
+        z-index: 210;
+    }
+}
+
+/* ===== PAGE HERO MOBILE ===== */
+@media (max-width: 767px) {
+    .page-hero {
+        min-height: 260px;
+        padding-bottom: 2rem;
+        padding-top: 1rem;
+    }
+
+    .page-hero h1 {
+        font-size: clamp(1.6rem, 6vw, 2.2rem);
+        margin-bottom: 0.75rem;
+    }
+
+    .page-hero-desc {
+        font-size: 0.8rem;
+        max-width: 100%;
+    }
+
+    .page-hero-badges {
+        gap: 0.5rem;
+    }
+
+    .page-hero-badge {
+        padding: 0.5rem 0.75rem;
+        min-width: 80px;
+    }
+
+    .page-hero-badge-title {
+        font-size: 0.9rem;
+    }
+
+    .page-hero-badge-sub {
+        font-size: 0.6rem;
+    }
+
+    .page-hero-bottom {
+        gap: 1.25rem;
+    }
+
+    /* Hero container padding on mobile */
+    .page-hero .container,
+    .page-hero > [class*="mx-auto"] {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .page-hero {
+        min-height: 300px;
+        padding-bottom: 2.5rem;
+    }
+
+    .page-hero h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+}
+
+/* ===== HOME HERO (h-[85vh]) MOBILE ===== */
+@media (max-width: 767px) {
+    .h-\[85vh\] {
+        height: auto;
+        min-height: 100svh;
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+
+    .min-h-\[600px\] {
+        min-height: unset;
+    }
+
+    /* Hero text sizing */
+    .text-5xl {
+        font-size: 2.25rem;
+        line-height: 1.15;
+    }
+
+    .md\:text-7xl {
+        font-size: 2.25rem;
+    }
+
+    /* Hero padding */
+    .lg\:px-32 {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .lg\:px-20 {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    /* Hero CTA buttons stack */
+    .flex.flex-wrap.gap-8.items-center {
+        gap: 1rem;
+    }
+
+    /* Stats bar below hero */
+    .bg-white.py-12.-mt-2.rounded-t-lg.mx-4 {
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .h-\[85vh\] {
+        height: 70vh;
+        min-height: 500px;
+    }
+
+    .lg\:px-32 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* ===== FLOATING CONTACT BUTTON MOBILE ===== */
+@media (max-width: 767px) {
+    .floating-contact-wrapper {
+        bottom: 1.25rem;
+        right: 1.25rem;
+    }
+
+    .floating-contact-btn {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.25rem;
+    }
+
+    .floating-contact-menu {
+        bottom: 4rem;
+        right: 0;
+        min-width: 200px;
+        max-width: calc(100vw - 2.5rem);
+    }
+
+    /* WhatsApp card submenu: prevent going off screen */
+    .whatsapp-card-menu {
+        right: 0;
+        left: auto;
+        min-width: 260px;
+        max-width: calc(100vw - 2.5rem);
+        /* on mobile position below to avoid going off top */
+        bottom: auto;
+        top: 100%;
+        margin-bottom: 0;
+        margin-top: 0.5rem;
+    }
+
+    .whatsapp-option.open .whatsapp-card-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .floating-contact-wrapper {
+        bottom: 1.75rem;
+        right: 1.75rem;
+    }
+}
+
+/* ===== CTA BANNER MOBILE ===== */
+@media (max-width: 767px) {
+    .cta-banner {
+        padding: 3rem 0;
+    }
+
+    .cta-banner-inner {
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .cta-banner h2 {
+        font-size: clamp(1.4rem, 5vw, 2rem);
+        text-align: center;
+    }
+
+    .cta-banner-desc {
+        font-size: 0.8rem;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .cta-banner-label {
+        justify-content: center;
+    }
+
+    .cta-banner-trust {
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .cta-action-card {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .cta-btn {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .cta-banner {
+        padding: 3.5rem 0;
+    }
+
+    .cta-banner-inner {
+        gap: 2rem;
+    }
+
+    .cta-action-card {
+        width: 100%;
+        max-width: 480px;
+    }
+}
+
+/* ===== SECTION TITLE MOBILE ===== */
+@media (max-width: 767px) {
+    .section-title {
+        font-size: 1.6rem;
+        line-height: 1.25;
+        margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.75rem;
+    }
+}
+
+/* ===== GENERAL CONTAINER PADDING MOBILE ===== */
+@media (max-width: 767px) {
+    .container.mx-auto.px-6 {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    /* Grid columns on mobile — force single column */
+    .md\:grid-cols-2,
+    .md\:grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .lg\:grid-cols-3,
+    .lg\:grid-cols-4 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Flex rows to columns on mobile */
+    .md\:flex-row {
+        flex-direction: column;
+    }
+
+    /* Side-by-side layout for sidebar pages */
+    .lg\:flex-row {
+        flex-direction: column;
+    }
+
+    /* Sidebar on layanan pages */
+    .lg\:w-1\/2,
+    .lg\:w-5\/12,
+    .lg\:w-7\/12 {
+        width: 100%;
+    }
+
+    /* Margins */
+    .mb-16 { margin-bottom: 2.5rem; }
+    .mb-12 { margin-bottom: 2rem; }
+    .mb-10 { margin-bottom: 1.75rem; }
+
+    /* Padding adjustments */
+    .py-24 { padding-top: 3rem; padding-bottom: 3rem; }
+    .py-20 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+    .py-16 { padding-top: 2rem; padding-bottom: 2rem; }
+
+    /* Step connector for mobile process flow */
+    .step-connector::after {
+        display: none;
+    }
+}
+
+/* ===== TABLET GRID ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .lg\:grid-cols-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lg\:grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lg\:w-5\/12,
+    .lg\:w-7\/12 {
+        width: 100%;
+    }
+
+    .lg\:flex-row {
+        flex-direction: column;
+    }
+
+    .container.mx-auto.px-6 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* ===== SIDEBAR LAYOUT MOBILE (layanan pages) ===== */
+@media (max-width: 1023px) {
+    /* Sidebar goes below content */
+    .sidebar-image-wrapper img {
+        height: 180px;
+    }
+
+    .sidebar-cta-body {
+        padding: 1.25rem 1.25rem 0.5rem;
+    }
+
+    .sidebar-cta-actions {
+        padding: 0 1.25rem 1.25rem;
+    }
+}
+
+/* ===== STATS BAR MOBILE ===== */
+@media (max-width: 767px) {
+    /* Stats row below hero — stack vertically */
+    .md\:flex-row.items-center.justify-between.gap-8 {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .md\:w-1\/3 {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #E5E7EB;
+        padding-bottom: 1rem;
+        padding-right: 0;
+    }
+
+    .md\:w-2\/3 {
+        width: 100%;
+    }
+}
+
+/* ===== WHATSAPP FLOATING — prevent overflow on small screens ===== */
+@media (max-width: 480px) {
+    .floating-contact-menu {
+        right: 0;
+        left: auto;
+        min-width: 180px;
+        max-width: calc(100vw - 1.5rem);
+    }
+
+    .whatsapp-card-menu {
+        min-width: 220px;
+        max-width: calc(100vw - 1.5rem);
+        right: 0;
+    }
+}
+
+/* ===== PREVENT HORIZONTAL OVERFLOW ===== */
+body {
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+/* ===== NAV OVERLAY BACKDROP (mobile) ===== */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 199;
+    backdrop-filter: blur(2px);
+}
+
+.nav-overlay.open {
+    display: block;
 }
